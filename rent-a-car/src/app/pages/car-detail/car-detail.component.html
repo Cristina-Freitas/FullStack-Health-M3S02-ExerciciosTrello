@@ -7,5 +7,10 @@
     <p>{{ car?.description }}</p>
 
     <div id="button">Alugar</div>
+
+    <button (click)="toggleFavorite()">
+      <span *ngIf="isFavorite; else notFavorite">❤️ Favorito</span>
+      <ng-template #notFavorite>🤍 Adicionar aos Favoritos</ng-template>
+    </button>
   </div>
   
