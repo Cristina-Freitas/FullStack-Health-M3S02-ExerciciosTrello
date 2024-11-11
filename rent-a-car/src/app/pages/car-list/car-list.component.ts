@@ -18,6 +18,7 @@ export class CarListComponent implements OnInit {
 
   cars: any[] = [];
   searchResults: any[] = [];
+  private storageKey = 'favorites';
 
   carSearch = new FormGroup({
     searchInput: new FormControl('')
@@ -30,7 +31,13 @@ export class CarListComponent implements OnInit {
   loadCars(): void {
     this.carService.listAll().subscribe({
       next: (data: any[]) => {
-        this.cars = data;
+        const favorites = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+
+        // Marca cada carro como favorito se ele estiver no array de favoritos
+        this.cars = data.map(car => ({
+          ...car,
+          isFavorite: favorites.some((fav: any) => fav.id === car.id)
+        }));
       },
       error: (error) => {
         console.error('Erro ao recuperar informações de carros: ', error);

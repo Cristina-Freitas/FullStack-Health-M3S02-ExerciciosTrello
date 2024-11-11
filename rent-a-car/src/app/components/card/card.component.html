@@ -8,6 +8,12 @@
     <div class="card-name">
     <h2>{{data.name}}</h2>
     </div>
+
+    <!-- Ícone de coração se o carro for favorito -->
+    <div class="favorite-icon" *ngIf="data.isFavorite">
+        ❤️
+      </div>
+
     <div class="card-img" *ngIf="data.image">
         <img src="../../../assets/civic-2022.png" alt="{{ data.name }}">
       </div>
