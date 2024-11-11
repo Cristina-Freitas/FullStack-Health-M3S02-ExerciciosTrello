@@ -53,22 +53,22 @@ export class CarListComponent implements OnInit {
     const searchInput = this.carSearch.value.searchInput?.trim();
     if (searchInput) {
       this.carService.listAll().subscribe((data) => {
-        this.searchResults = data.filter((searchedCar: { name: string; type: string }) => {
+        this.cars = data.filter((searchedCar: { name: string; type: string }) => {
           const isNameMatch = searchedCar.name.toLowerCase().includes(searchInput.toLowerCase());
           const isTypeMatch = searchedCar.type.toLowerCase().includes(searchInput.toLowerCase());
           return isNameMatch || isTypeMatch;
         });
-        this.searchResults.sort((a, b) => a.name.localeCompare(b.name));
-        if (this.searchResults.length === 0) {
+  
+        if (this.cars.length === 0) {
           alert('Não foram encontrados carros com este modelo ou tipo.');
         }
-        this.cars = this.searchResults;
       });
     } else {
       this.loadCars();
       alert('A lista de carros foi recarregada.');
     }
   }
+  
 
   trackByCarId(index: number, car: any): string {
     return car.id;
