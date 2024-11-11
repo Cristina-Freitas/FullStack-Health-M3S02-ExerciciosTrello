@@ -1,0 +1,18 @@
+<div class="car-list-page">
+    <div id="car-search-container">
+      <p>Busque o carro por modelo ou tipo no campo abaixo:</p>
+      <form id="car-form" (ngSubmit)="searchCar()" [formGroup]="carSearch">
+        <input type="text" formControlName="searchInput" placeholder="Digite o modelo ou tipo">
+        <button type="submit">Pesquisar</button>
+      </form>
+    </div>
+  
+    <div id="car-rendered-list">
+      <ng-container *ngFor="let car of cars; trackBy: trackByCarId">
+        <app-card [data]="car" (click)="redirectToDetail(car.id)"></app-card>
+      </ng-container>
+    </div>
+  </div>
+  
+  
+  

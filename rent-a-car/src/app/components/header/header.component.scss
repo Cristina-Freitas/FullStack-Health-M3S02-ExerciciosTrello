@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3395eb; // Cor de fundo do header
+    color: #fff; // Cor do texto
+    padding: 10px 20px; // Espaçamento interno
+  
+    .logo {
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  
+    .nav {
+      ul {
+        list-style: none; // Remove os marcadores da lista
+        margin: 0;
+        padding: 0;
+        display: flex;
+        
+        li {
+          margin-left: 20px; // Espaçamento entre os itens do menu
+          
+          a {
+            color: #fff; // Cor do link
+            text-decoration: none; // Remove sublinhado
+            font-weight: 500;
+  
+            &:hover {
+              text-decoration: underline; // Sublinha o link ao passar o mouse
+            }
+          }
+        }
+      }
+    }
+  }
+  

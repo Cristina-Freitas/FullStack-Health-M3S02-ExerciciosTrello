@@ -1,0 +1,16 @@
+.footer {
+    background-color: #3395eb; // Cor de fundo do footer
+    color: #fff; // Cor do texto
+    padding: 20px; // Espaçamento interno
+    text-align: center; // Centraliza o texto
+    font-size: 14px; // Tamanho da fonte
+  
+    p {
+      margin: 0; // Remove margens para o parágrafo
+      line-height: 1.5; // Ajusta o espaçamento entre linhas
+    }
+  
+    // Opção para adicionar uma borda superior sutil para separação
+    border-top: 1px solid #444;
+  }
+  

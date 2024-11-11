@@ -1,0 +1,78 @@
+.car-card {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    .card-innerbox {
+      padding: 16px;
+    }
+  
+    .card-header {
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 0;
+      border-radius: 4px;
+      margin-bottom: 12px;
+  
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+    }
+  
+    .card-name {
+      text-align: center;
+      margin-bottom: 12px;
+  
+      h2 {
+        font-size: 1.4rem;
+        color: #333;
+        margin: 0;
+      }
+    }
+  
+    .card-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+    }
+  
+    .card-info-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-top: 1px solid #f0f0f0;
+  
+      &:first-of-type {
+        border-top: none;
+      }
+  
+      .card-info {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+  
+    .card-footer {
+      text-align: center;
+      padding: 12px 0;
+    
+    }
+    }
