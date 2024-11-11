@@ -1,1 +1,9 @@
-<p>car-detail works!</p>
+<div class="car-detail">
+    <h1>{{ car?.name }}</h1>
+    <img src="'../../../../../assets/corolla-2021.png' + car?.image" alt="{{ car?.name }}">
+    <p>Tipo: {{ car?.type }}</p>
+    <p>Ano: {{ car?.year }}</p>
+    <p>Diária: R$ {{ car?.pricePerDay }}</p>
+    <p>{{ car?.description }}</p>
+  </div>
+  
